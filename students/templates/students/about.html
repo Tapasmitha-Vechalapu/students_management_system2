@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block title %}HOME{% endblock %}
+    {% block content %}
+    <h1 class="page-title">Welcome</h1>
+    <p class="page-sub">Built during a 5 - days Django workshop.</p>
+    
+    <div class="panel">
+        <h2 class="panel-title">Courses we offer</h2>
+    
+    <ul>
+        {% for course in course_names %}
+            <li>{{ course }}</li>
+        {% endfor %}
+    </ul>
+    </div>
+    {% endblock %}
+</body>
+</html>
